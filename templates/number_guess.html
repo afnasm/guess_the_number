@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GUESS_THE_NUMBER</title>
+</head>
+<body>
+<form method="post">{% csrf_token %}
+    <div style="position: absolute;height: 100%;width: 100%;background-color: darkgoldenrod">
+        <div style="padding-top:50px">
+            <h1 style="margin-left: 30%">GUESS THE NUMBER</h1>
+            <input type="text" pattern="[0-9]{1,2}" style="height: 40px;width: 500px;margin-left: 25%;" placeholder="GUESS THE NUMBER BETWEEN 1 - 99" name="check" {{ required }}>
+            <br><br>
+            <button name="{{ button_name }}" style="margin-left: 35%;width: 100px;height: 30px;"value="submit">{{ button_title }}</button>
+            <h2 style="margin-left : 30%;">{{ msg }}</h2>
+        </div>
+    </div>
+</form>
+</body>
+</html>
